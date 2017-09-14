@@ -40,5 +40,6 @@ $(function() {
 
   $('button.btn').click(function()  {
     sendQuestion();
+    $('input[type="text"]').val("");
   });
 });
