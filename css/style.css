@@ -30,6 +30,8 @@ body {
   color: #69de9e;
   text-align: -webkit-center;
   font-size: 35px;
+  width: 500px;
+  margin: auto;
 }
 
 .block {
