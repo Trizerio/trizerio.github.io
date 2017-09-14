@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+#page {
+  width: 600px;
+  margin: auto;
+  position: relative;
+  top: 38%;
+}
+
+#answer-holder {
+ position: absolute;
+ width: 100%;
+ margin-top: -60px;
+}
+
+.answer {
+  color: #69de9e;
+  text-align: -webkit-center;
+  font-size: 35px;
+}
+
+.block {
+  margin: auto;
+  position: relative;
+}
+
+.block::after {
+    content: "Данный сервис предоставляет Вам максимально быстрый ответ «Да» или «Нет»";
+    display: block;
+    position: relative;
+    top: 10px;
+    text-align: -webkit-center;
+    border-bottom: 1px dashed #d7d8db;
+    line-height: 20px;
+    color: #b5b5b5;
+}
+
+.action {
+  margin: 20px;
+  text-align: center;
+}
+
+button.btn {
+    padding: 10px 30px;
+    border: 0;
+    background: #69b8de;
+    color: #ffffff;
+    border-radius: 20px;
+    text-shadow: 0 0px 1px #a0a0a0;
+    outline: none;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+button.btn:hover {
+    cursor: pointer;
+    background: #61a9cc;
+}
+
+input[type="text"] {
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    color: #6d6d6d;
+    padding: 15px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size: 17px;
+}
