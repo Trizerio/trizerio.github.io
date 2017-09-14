@@ -13,17 +13,17 @@ $(function() {
       if(answer_count > 0) {
         $('.answer').remove();
         if(answer[random] == 'Да') {
-          $('#answer-holder').prepend(`<div class="animated fadeInUp answer">Да</div>`);
+          $('#answer-holder').prepend(`<div class="animated fadeInUp answer"><label>${$('input[type="text"]').val()} — </label>Да</div>`);
         } else {
-          $('#answer-holder').prepend(`<div class="animated fadeInUp answer" style="color: #de6969 !important;">Нет</div>`);
+          $('#answer-holder').prepend(`<div class="animated fadeInUp answer" style="color: #de6969 !important;"><label>${$('input[type="text"]').val()} — </label> Нет</div>`);
         }
         answer_count +=1;
       }
       if(answer_count < 1) {
         if(answer[random] == 'Нет') {
-          $('#answer-holder').prepend(`<div class="animated fadeInUp answer" style="color: #de6969 !important;">Нет</div>`);
+          $('#answer-holder').prepend(`<div class="animated fadeInUp answer" style="color: #de6969 !important;"><label>${$('input[type="text"]').val()} — </label> Нет</div>`);
         } else {
-          $('#answer-holder').prepend(`<div class="animated fadeInUp answer">Да</div>`);
+          $('#answer-holder').prepend(`<div class="animated fadeInUp answer"><label>${$('input[type="text"]').val()} — </label>Да</div>`);
         }
         answer_count += 1;
       }

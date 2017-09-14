@@ -80,3 +80,7 @@ input[type="text"] {
     outline: none;
     font-size: 17px;
 }
+
+label {
+    color: #6d6d6d;
+}
