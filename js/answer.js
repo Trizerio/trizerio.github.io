@@ -2,10 +2,9 @@ $(function() {
 
   var answer_count = 0;
 
-  $('button.btn').click(function() {
+  sendQuestion = function() {
     var answer = ['Да', 'Нет'];
     var random = Math.floor(Math.random() * answer.length);
-
     if($('input[type="text"]').val().length < 1 || !isNaN($('input[type="text"]').val())) {
       $('.answer').remove();
       $('#answer-holder').prepend(`<div class="animated fadeInUp answer" type="error" style="color: #de6969 !important;">Пожалуйста, введите свой вопрос</div>`);
@@ -29,5 +28,17 @@ $(function() {
         answer_count += 1;
       }
     }
+  };
+
+  $('input[type="text"]').on('keydown', function(e) {
+      if (e.which == 13) {
+          e.preventDefault();
+          sendQuestion();
+          $('input[type="text"]').val("");
+      }
+  });
+
+  $('button.btn').click(function()  {
+    sendQuestion();
   });
 });
