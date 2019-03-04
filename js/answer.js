@@ -6,12 +6,11 @@ $(function() {
 	}
 	sendQuestion = () => {
 		var text = $('input[type="text"]').val();
-		if(text.match(/(.*) (ИЛИ|Или|или) (.*[^?])/g)) {
+		if(text.match(/(.*) (ИЛИ|Или|или) (.*)/g)) {
 			var words = text.split(' ИЛИ ' || ' Или' || ' или ');
-			console.log(words);
+			words[1].replace('?', '');
 			var random = ~~(Math.random() * words.length);
-			console.log(words[random]);
-			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
+			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}?</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
 		}
 	  	if($('input[type="text"]').val().length > 1) {
 	  		var answer = [answerer.yes, answerer.no];
