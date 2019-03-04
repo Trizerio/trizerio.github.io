@@ -5,13 +5,13 @@ $(function() {
 		no: `<div class="animated fadeInUp answer" style="color: #de6969 !important;">Нет</div>`
 	}
 	sendQuestion = () => {
-		var text = $('input[type="text"]').val().toLowerCase();
+		var text = $('input[type="text"]').val();
 		if(text.match(/(.*) (ИЛИ|Или|или) (.*[^?])/g)) {
 			var words = text.split(' ИЛИ ' || ' Или' || ' или ');
 			console.log(words);
 			var random = ~~(Math.random() * words.length);
 			console.log(words[random]);
-			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>Между ${words[0]} и ${words[1]} я выбираю: </label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
+			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
 		}
 	  	if($('input[type="text"]').val().length > 1) {
 	  		var answer = [answerer.yes, answerer.no];
