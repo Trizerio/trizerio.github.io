@@ -7,7 +7,7 @@ $(function() {
 	sendQuestion = () => {
 		if(!isNaN($('input[type="text"]').val())) {
 			try {
-				var eval = eval(parseInt($('input[type="text"]').val()));
+				var eval = eval($('input[type="text"]').val());
 				$("#answer-holder").prepend(`<div class="animated fadeInUp answer">${eval}</div>`);
 			} catch(error) {
 				$("#answer-holder").prepend(answerer.error);
