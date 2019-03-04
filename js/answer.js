@@ -7,21 +7,20 @@ $(function() {
 	}
 	sendQuestion = () => {
 	  	if($('input[type="text"]').val().length < 1 || !isNaN($('input[type="text"]').val())) {
-	  		$('.answer').prepend(answerer.error);
+	  		$('.answer-holder').prepend(answerer.error);
 	  	} else {
 	  		let answer = ["yes", "no"];
 	  		let random = ~~(Math.random() * answer.length);
 	  		switch(answer[random]) {
 	  			case 0:
-	  				$('.answer').prepend(answerer.yes);
+	  				$('.answer-holder').prepend(answerer.yes);
 	  			break;
 	  			case 1:
-	  				$('.answer').prepend(answerer.no);
+	  				$('.answer-holder').prepend(answerer.no);
 	  			break;
 	  		}
 	  	}
 	}
-
 	$('input[type="text"]').on('keydown', function(e) {
 		if(e.which == 13) {
 			e.preventDefault();
