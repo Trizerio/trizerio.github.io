@@ -8,7 +8,11 @@ $(function() {
 		var text = $('input[type="text"]').val();
 		if(text.match(/(.*) (ИЛИ|Или|или) (.*)/g)) {
 			var words = text.split(' ИЛИ ' || ' Или' || ' или ');
-			words[1].replace('?', '');
+			for(var i = 0; i < words.length; i++) {
+				if(words[i].indexOf('?') >= 0) {
+					words[i].replace('?', '').trim();
+				}
+			}
 			var random = ~~(Math.random() * words.length);
 			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}?</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
 		}
