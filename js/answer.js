@@ -1,10 +1,18 @@
 $(function() {
 	let answerer = {
-		error: `<div class="animated fadeInUp answer" type="error" style="color: #de6969 !important;">Пожалуйста, введите свой вопрос</div>`,
+		error: `<div class="animated fadeInUp answer" type="error" style="color: #de6969 !important;">Некорректный запрос</div>`,
 		yes: `<div class="animated fadeInUp answer">Да</div>`,
 		no: `<div class="animated fadeInUp answer" style="color: #de6969 !important;">Нет</div>`
 	}
 	sendQuestion = () => {
+		if(!isNaN($('input[type="text"]').val())) {
+			try {
+				var eval = eval(parseInt($('input[type="text"]').val());
+				$("#answer-holder").prepend(`<div class="animated fadeInUp answer">${eval}</div>`);
+			} catch(error) {
+				$("#answer-holder").prepend(answerer.error);
+			}
+		}
 		var text = $('input[type="text"]').val().toLowerCase();
 		if(text.match(/(.*) или (.*)/g)) {
 			var words = text.split(' или ');
