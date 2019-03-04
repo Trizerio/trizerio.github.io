@@ -6,7 +6,7 @@ $(function() {
 	}
 	sendQuestion = () => {
 		var text = $('input[type="text"]').val();
-		if(text.match(/(.*)или(.*[^?])/g)) {
+		if(text.match(/(.*) или (.[^?]*)/g)) {
 			var words = text.split(' или ');
 			console.log(words);
 			var random = ~~(Math.random() * words.length);
