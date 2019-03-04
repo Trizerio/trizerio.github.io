@@ -9,6 +9,8 @@ $(function() {
 	  		let answer = [answerer.yes, answerer.no];
 	  		var random = ~~(Math.random() * answer.length);
 	  		$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${$('input[type="text"]').val()}</label>` + answer[random] + "</div>");
+	  	} else {
+	  		$('#answer-holder').prepend(answerer.error);
 	  	}
 	}
 	$('input[type="text"]').on('keydown', function(e) {
