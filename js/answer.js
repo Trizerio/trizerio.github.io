@@ -6,12 +6,11 @@ $(function() {
 	}
 	sendQuestion = () => {
 		var text = $('input[type="text"]').val().toLowerCase();
-		if(text.match(/(.*) или (.[^?]*)/g)) {
+		if(text.match(/(.*) или (.*[^?])/g)) {
 			var words = text.split(' или ');
 			console.log(words);
 			var random = ~~(Math.random() * words.length);
 			console.log(words[random]);
-			$('input[type="text"]').val("");
 			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>Между ${words[0]} и ${words[1]} я выбираю: </label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
 		}
 	  	if($('input[type="text"]').val().length > 1) {
@@ -28,6 +27,7 @@ $(function() {
 			$('.answer[type="error"]').remove();
 			$('.answer').remove();
 			sendQuestion();
+			$('input[type="text"]').val("");
 		}
 	});
 });
