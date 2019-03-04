@@ -25,7 +25,7 @@ body {
  position: absolute;
  width: 100%;
  word-wrap: break-word;
- bottom: 115%;
+ bottom: 140%;
 }
 
 .answer {
@@ -86,10 +86,12 @@ input[type="text"] {
     font-size: 17px;
     box-shadow: 0 2px #ebebeb;
     transition: 0.5s all;
+    text-indent: 110px !important;
 }
 
 input[type="text"]:focus {
     box-shadow: 0 2px #63bee7;
+    text-indent: 0 !important;
 }
 
 label {
