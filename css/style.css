@@ -84,15 +84,22 @@ input[type="text"] {
     outline: none;
     font-size: 17px;
     box-shadow: 0 2px #ebebeb;
-    transition: 0.5s all;
-    text-indent: 110px !important;
 }
 
 input[type="text"]:focus {
     box-shadow: 0 2px #63bee7;
-    text-indent: 0 !important;
 }
 
 label {
     color: #6d6d6d;
+}
+
+:focus::-webkit-input-placeholder {
+    transform: translateX(0%);
+    transition: 0.5s all;
+}
+
+::-webkit-input-placeholder {
+    transform: translateX(20%);
+    transition: 0.5s all;
 }
