@@ -6,12 +6,7 @@ $(function() {
 	}
 	sendQuestion = () => {
 		if(!isNaN($('input[type="text"]').val())) {
-			try {
-				var eval = eval($('input[type="text"]').val());
-				$("#answer-holder").prepend(`<div class="animated fadeInUp answer">${eval}</div>`);
-			} catch(error) {
-				$("#answer-holder").prepend(answerer.error);
-			}
+			$("#answer-holder").prepend(`<div class="animated fadeInUp answer">${eval($('input[type="text"]').val())}</div>`);
 		}
 		var text = $('input[type="text"]').val().toLowerCase();
 		if(text.match(/(.*) или (.*)/g)) {
