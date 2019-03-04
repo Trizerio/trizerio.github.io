@@ -6,7 +6,7 @@ $(function() {
 	}
 	sendQuestion = () => {
 		if(!isNaN(parseFloat($('input[type="text"]').val()))) {
-			$("#answer-holder").prepend(`<div class="animated fadeInUp answer">${eval($('input[type="text"]').val())}</div>`);
+			$("#answer-holder").prepend(`<div class="animated fadeInUp answer">${eval($('input[type="text"]').val())}</div>`); return;
 		}
 		var text = $('input[type="text"]').val().toLowerCase();
 		if(text.match(/(.*) или (.*)/g)) {
