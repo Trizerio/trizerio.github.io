@@ -6,8 +6,8 @@ $(function() {
 	}
 	sendQuestion = () => {
 		var text = $('input[type="text"]').val().toLowerCase();
-		if(text.match(/(.*) или (.*[^?])/g)) {
-			var words = text.split(' или ');
+		if(text.match(/(.*) (ИЛИ|Или|или) (.*[^?])/g)) {
+			var words = text.split(' ИЛИ ' || ' Или' || ' или ');
 			console.log(words);
 			var random = ~~(Math.random() * words.length);
 			console.log(words[random]);
