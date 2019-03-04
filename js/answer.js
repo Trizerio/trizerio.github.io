@@ -12,7 +12,7 @@ $(function() {
 			var random = ~~(Math.random() * words.length);
 			console.log(words[random]);
 			$('input[type="text"]').val("");
-			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
+			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>Между ${words[0]} и ${words[1]} я выбираю: </label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
 		}
 	  	if($('input[type="text"]').val().length > 1) {
 	  		var answer = [answerer.yes, answerer.no];
