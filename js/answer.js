@@ -5,7 +5,7 @@ $(function() {
 		no: `<div class="animated fadeInUp answer" style="color: #de6969 !important;">Нет</div>`
 	}
 	sendQuestion = () => {
-		var text = $('input[type="text"]').val();
+		var text = $('input[type="text"]').val().toLowerCase();
 		if(text.match(/(.*) или (.[^?]*)/g)) {
 			var words = text.split(' или ');
 			console.log(words);
