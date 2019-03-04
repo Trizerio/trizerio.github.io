@@ -5,7 +5,7 @@ $(function() {
 		no: `<div class="animated fadeInUp answer" style="color: #de6969 !important;">Нет</div>`
 	}
 	sendQuestion = () => {
-		if(!isNaN($('input[type="text"]').val())) {
+		if(!isNaN(parseFloat($('input[type="text"]').val()))) {
 			$("#answer-holder").prepend(`<div class="animated fadeInUp answer">${eval($('input[type="text"]').val())}</div>`);
 		}
 		var text = $('input[type="text"]').val().toLowerCase();
