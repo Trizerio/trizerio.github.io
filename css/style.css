@@ -84,6 +84,7 @@ input[type="text"] {
     outline: none;
     font-size: 17px;
     box-shadow: 0 2px #ebebeb;
+    transition: 0.5s all;
 }
 
 input[type="text"]:focus {
