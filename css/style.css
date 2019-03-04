@@ -88,6 +88,10 @@ input[type="text"] {
     transition: 0.5s all;
 }
 
+input[type="text"] {
+    box-shadow: 0 2px #63bee7;
+}
+
 label {
     color: #6d6d6d;
 }
