@@ -5,9 +5,9 @@ $(function() {
 		no: `<div class="animated fadeInUp answer" style="color: #de6969 !important;">Нет</div>`
 	}
 	sendQuestion = () => {
-		var text = $('input[type="text"]').val();
-		if(text.toLowerCase().match(/(.*)(ИЛИ|Или|или)(.*)/g)) {
-			var words = text.split( /(ИЛИ|Или|или)/ );
+		var text = $('input[type="text"]').val().toLowerCase();
+		if(text.match(/(.*) или (.*)/g)) {
+			var words = text.split(' или ');
 			words = words.toString().replace('?', '').split(',');
 			var random = ~~(Math.random() * words.length);
 			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}?</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
