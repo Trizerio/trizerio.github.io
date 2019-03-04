@@ -6,13 +6,13 @@ $(function() {
 	}
 	sendQuestion = () => {
 		var text = $('input[type="text"]').val();
-		if(text.match(/(.*) или (.*)[?]/g)) {
+		if(text.match(/(.*) или (.*)[.?]/g)) {
 			var words = text.split(' или ');
 			console.log(words);
 			var random = ~~(Math.random() * words.length);
 			console.log(words[random]);
 			$('input[type="text"]').val("");
-			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}</label>` + words[random] + "</div>"); return;
+			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
 		}
 	  	if($('input[type="text"]').val().length > 1) {
 	  		var answer = [answerer.yes, answerer.no];
