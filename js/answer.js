@@ -7,9 +7,9 @@ $(function() {
 	sendQuestion = () => {
 		var text = $('input[type="text"]').val();
 		if(text.toLowerCase().match(/(.*) или (.*)/g)) {
-			var words = text.toLowerCase().split(' или ');
+			var words = text.split(' ИЛИ ' || 'Или' || 'или');
 			for(var i = 0; i < words.length; i++) {
-				if(words[i].indexOf('?') >= 0) {
+				if(words[i].indexOf('?') != -1) {
 					words[i].replace('?', '').trim();
 				}
 			}
