@@ -7,16 +7,16 @@ $(function() {
 	}
 	sendQuestion = () => {
 	  	if($('input[type="text"]').val().length < 1 || !isNaN($('input[type="text"]').val())) {
-	  		$('.answer').html(answerer.error);
+	  		$('.answer').prepend(answerer.error);
 	  	} else {
 	  		let answer = ["yes", "no"];
 	  		let random = ~~(Math.random() * answer.length);
 	  		switch(answer[random]) {
 	  			case 0:
-	  				$('.answer').html(answerer.yes);
+	  				$('.answer').prepend(answerer.yes);
 	  			break;
 	  			case 1:
-	  				$('.answer').html(answerer.no);
+	  				$('.answer').prepend(answerer.no);
 	  			break;
 	  		}
 	  	}
