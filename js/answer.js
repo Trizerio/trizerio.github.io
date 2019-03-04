@@ -27,7 +27,6 @@ $(function() {
 			$('.answer').remove();
 			sendQuestion();
 			$('input[type="text"]').val("");
-			$('input[type="text"]').blur();
 		}
 	});
 });
