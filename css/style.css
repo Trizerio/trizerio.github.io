@@ -26,6 +26,7 @@ body {
  width: 100%;
  word-wrap: break-word;
  bottom: 140%;
+ user-select: none;
 }
 
 .answer {
