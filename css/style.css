@@ -10,13 +10,15 @@ body {
 #wrapper {
   width: 100vw;
   height: 100vh;
+  background: white;
 }
 
 #page {
   width: 600px;
   margin: auto;
   position: relative;
-  top: 38%;
+  top: 50%;
+  transform: translateY(-50px);
 }
 
 #answer-holder {
@@ -40,7 +42,6 @@ body {
 }
 
 .block::after {
-    content: "Данный сервис предоставляет Вам максимально быстрый ответ «Да» или «Нет»";
     display: block;
     position: relative;
     top: 10px;
@@ -52,36 +53,39 @@ body {
 
 .action {
   margin: 20px;
-  text-align: center;
+  text-align: -webkit-center;
 }
 
 button.btn {
     padding: 10px 30px;
     border: 0;
-    background: #69b8de;
-    color: #ffffff;
-    border-radius: 20px;
-    text-shadow: 0 0px 1px #a0a0a0;
+    background: #ffffff;
+    color: #757575;
+    border-radius: 30px;
     outline: none;
     transition: 0.2s;
     font-size: 14px;
+    border: 1px solid #757575;
 }
 
 button.btn:hover {
     cursor: pointer;
-    background: #61a9cc;
+    background: #65bce4;
+    color: white;
+    border-color: #65bce4;
 }
 
 input[type="text"] {
     margin: auto;
     background: #ffffff;
-    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
     color: #6d6d6d;
     padding: 15px;
     width: 100%;
     border: 0;
     outline: none;
     font-size: 17px;
+    box-shadow: 0 2px #ebebeb;
+    transition: 0.5s all;
 }
 
 label {
