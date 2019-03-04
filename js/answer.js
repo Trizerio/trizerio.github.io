@@ -10,7 +10,7 @@ $(function() {
 			var words = text.split(' ИЛИ ' || 'Или' || 'или');
 			words = words.toString().replace('?', '').split(',');
 			var random = ~~(Math.random() * words.length);
-			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
+			$("#answer-holder").prepend(`<div class="animated fadeInUp answer"><label>${words[0]} или ${words[1]}?</label><div class="animated fadeInUp answer">` + words[random] + "</div>"); return;
 		}
 	  	if($('input[type="text"]').val().length > 1) {
 	  		var answer = [answerer.yes, answerer.no];
