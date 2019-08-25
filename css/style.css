@@ -14,11 +14,12 @@
 
 .middle-block {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-45%) scale(2);
     width: auto;
-    text-align: -webkit-center;
+    text-align:
+    -webkit-center;
     height: 196px;
     width: 250px;
 }
