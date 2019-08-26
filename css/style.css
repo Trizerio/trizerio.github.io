@@ -120,3 +120,15 @@ i.fas.fa-arrow-down {
     color: #404040;
     width: max-content;
 }
+
+.timer {
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-160%);
+    border: none;
+    color: #404040;
+    width: max-content;
+    font-size: 30px;
+    font-weight: bold;
+}
